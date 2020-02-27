@@ -1,0 +1,13 @@
+:host {
+  flex-grow: 2;
+  border: solid black thick;
+  padding: 20px;
+}
+
+.timer-input-container {
+  margin-bottom: 30px;
+
+  label {
+    margin-right: 20px;
+  }
+}

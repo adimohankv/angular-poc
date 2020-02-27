@@ -1,0 +1,11 @@
+<div class="timer-input-container">
+  <label for="timer-input">Enter Timer Limit</label>
+  <input type="number" name="timer-input" id="timer-input" #txtcounter/>
+</div>
+<button class="button-start" (click)="onCounterStartClick(txtcounter.value)">Start / Pause </button>
+<button class="button-reset" (click)="onResentClick()">Reset</button>
+<div class="resent-stats">
+  <ul>
+    <li *ngFor="let pauseTracker of stats.pauseTracker">{{ pauseTracker }}</li>
+  </ul>
+</div>

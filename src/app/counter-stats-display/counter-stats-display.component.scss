@@ -1,0 +1,22 @@
+.counter-stats {
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.counter-actions-stat {
+  display: flex;
+
+  .counter-actions-started,
+  .counter-actions-paused {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+
+    .tracker {
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+}

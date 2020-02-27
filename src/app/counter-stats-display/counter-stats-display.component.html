@@ -1,0 +1,17 @@
+<div class="counter-stats">
+  <div class="counter-actions">
+    <ul>
+      <li *ngFor="let action of stats.actionsTracker">{{ action }}</li>
+    </ul>
+  </div>
+  <div class="counter-actions-stat">
+    <div class="counter-actions-started">
+      <span class="tracker">{{ stats.startedCounter }}</span>
+      <span class="label">Started</span>
+    </div>
+    <div class="counter-actions-paused">
+      <span class="tracker">{{ stats.pausedCounter }}</span>
+      <span class="label">Paused</span>
+    </div>
+  </div>
+</div>

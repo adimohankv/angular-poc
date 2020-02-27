@@ -1,0 +1,6 @@
+<h2 class="counter">JS Counter</h2>
+<div class="counter-holder">
+  <app-counter-display [time]="time"></app-counter-display>
+  <app-counter-control (timeUpdated)="onTimeUpdated($event)"></app-counter-control>
+</div>
+<app-counter-stats-display></app-counter-stats-display>

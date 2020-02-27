@@ -1,0 +1,23 @@
+<h2>Ecommerce Grid Works</h2>
+
+<div class="container">
+  <div class="grid-controller">
+    <!--Replace with icons-->
+    <span class="grid" [ngClass]="{active: activeStyle === 'grid'}" (click)="activeStyle = 'grid'">Grid</span>
+    <span class="list" [ngClass]="{active: activeStyle === 'list'}" (click)="activeStyle = 'list'">List</span>
+    <select name="sort" id="sort" #sortOption (change)="sortAttr = sortOption.value">
+      <option value="priceLTH">Price Low to High</option>
+      <option value="priceHTL">Price High to low</option>
+    </select>
+  </div>
+  <div class="main-container">
+    <ul class="{{ activeStyle }}">
+      <li *ngFor="let product of ( productsList | sort:sortAttr )" class="product-container">
+        <div class="product">
+          <span class="name">{{ product.name }}</span>
+          <span class="price">Price: {{ product.price | currency }}</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
