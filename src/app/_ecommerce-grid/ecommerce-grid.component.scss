@@ -1,0 +1,59 @@
+:host {
+  width: 100%;
+}
+
+.grid-controller {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+
+  .grid,
+  .list {
+    border: solid black thin;
+    padding: 10px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: grey;
+    }
+
+    &.active {
+      background-color: #1976d2;
+    }
+  }
+
+  select {
+    margin-left:  20px
+  }
+}
+
+.main-container {
+  ul {
+    width: 100%;
+    list-style: none;
+
+    &.grid {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .product-container {
+      max-width: 25%;
+      min-width: 250px;
+      height: 200px;
+      border: solid black thin;
+      margin: 20px;
+
+      .product {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+
+        .name {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}

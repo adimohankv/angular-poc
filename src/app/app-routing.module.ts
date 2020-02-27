@@ -9,19 +9,20 @@ import { EcommerceGridComponent } from './ecommerce-grid/ecommerce-grid.componen
 const routes: Routes = [
   {
     path: '',
-    component: CounterComponent
+    redirectTo: 'counter',
+    pathMatch: 'full'
   },
   {
     path: 'counter',
-    component: CounterComponent
-  },
-  {
-    path: 'rotating-text',
-    component: RotatingTextComponent
+    loadChildren: () => import('./counter/counter.module').then(m => m.CounterModule)
   },
   {
     path: 'ecommerce-grid',
-    component: EcommerceGridComponent
+    loadChildren: () => import('./ecommerce-grid/ecommerce-grid.module').then(m => m.EcommerceGridModule)
+  },
+  {
+    path: 'rotating-text',
+    loadChildren: () => import('./rotating-text/rotating-text.module').then(m => m.RotatingTextModule)
   }
 ];
 
