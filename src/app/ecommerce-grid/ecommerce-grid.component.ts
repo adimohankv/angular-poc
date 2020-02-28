@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { EcommerceService } from '../services/ecommerce.service';
+import { EcommerceService } from './services/ecommerce.service';
 
 @Component({
   selector: 'app-ecommerce-grid',
